@@ -3,7 +3,7 @@ ARG BUILD_METHOD=source
 ARG GOLANG_VERSION=1.17-buster
 ARG BASE_IMAGE=golang:${GOLANG_VERSION}
 
-#
+# f
 # Default build environment for standard Tendermint chains
 #
 FROM ${BASE_IMAGE} AS build_base
