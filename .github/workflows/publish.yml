@@ -13,104 +13,104 @@ jobs:
       max-parallel: 15
       matrix:
         include:
-          - project: assetmantle
-            version: v0.3.0
-          - project: akash
-            version: v0.16.3
-          - project: agoric
-            version: agoric-3.1
-          - project: bandchain
-            version: v2.3.3
-          - project: bitcanna
-            version: v.1.3.1
-          - project: bitsong
-            version: v0.10.0
-          - project: bostrom
-            version: v0.2.0
-          - project: cerberus
-            version: v1.0.1
-          - project: cheqd
-            version: v0.5.0
-          - project: chihuahua
-            version: v1.1.1
-          - project: chronicnetwork
-            version: v1.1.0
-          - project: comdex
-            version: v0.1.1
-          - project: cosmoshub
-            version: v7.0.1
-          - project: cronos
-            version: v0.7.0
-          - project: cryptoorgchain
-            version: v3.3.3
-          - project: decentr
-            version: v1.5.7
-          - project: defund
-            version: v0.0.2
-          - project: desmos
-            version: v2.3.1
-          - project: dig
-            version: v2.0.1
-          - project: emoney
-            version: v1.1.4
-          - project: evmos
-            version: v4.0.1
-          - project: fetchhub
-            version: v0.9.1
-          - project: gravitybridge
-            version: v1.4.1
-          - project: impacthub
-            version: v0.17.0
-          - project: irisnet
-            version: v1.0.1
-          - project: juno
-            version: v6.0.0
-          - project: kava
-            version: v0.16.1
-          - project: kichain
-            version: 3.0.0
-          - project: konstellation
-            version: v0.5.0
-          - project: kujira
-            version: v0.4.0
-          - project: likecoin
-            version: v2.0.2
-          - project: lumnetwork
-            version: v1.0.5
+       #  - project: assetmantle
+       #     version: v0.3.0
+       #   - project: akash
+       #     version: v0.16.3
+       #   - project: agoric
+       #     version: agoric-3.1
+       #   - project: bandchain
+       #     version: v2.3.3
+       #   - project: bitcanna
+       #     version: v.1.3.1
+        #  - project: bitsong
+       #     version: v0.10.0
+       #   - project: bostrom
+       #     version: v0.2.0
+       #   - project: cerberus
+       #     version: v1.0.1
+       #   - project: cheqd
+       #     version: v0.5.0
+       #   - project: chihuahua
+        #    version: v1.1.1
+       #   - project: chronicnetwork
+       #     version: v1.1.0
+       #   - project: comdex
+       #     version: v0.1.1
+       #   - project: cosmoshub
+       #     version: v7.0.1
+       #   - project: cronos
+       #     version: v0.7.0
+       #   - project: cryptoorgchain
+       #     version: v3.3.3
+       #   - project: decentr
+       #     version: v1.5.7
+       #   - project: defund
+       #     version: v0.0.2
+       #   - project: desmos
+       #     version: v2.3.1
+       #   - project: dig
+       #     version: v2.0.1
+       #   - project: emoney
+       #     version: v1.1.4
+       #   - project: evmos
+       #     version: v4.0.1
+        #  - project: fetchhub
+        #    version: v0.9.1
+        #  - project: gravitybridge
+        #    version: v1.4.1
+        #  - project: impacthub
+        #    version: v0.17.0
+        #  - project: irisnet
+        #    version: v1.0.1
+        #  - project: juno
+        #    version: v6.0.0
+        #  - project: kava
+        #    version: v0.16.1
+        #  - project: kichain
+         #   version: 3.0.0
+        #  - project: konstellation
+        #    version: v0.5.0
+        #  - project: kujira
+        #    version: v0.4.0
+        #  - project: likecoin
+        #    version: v2.0.2
+        #  - project: lumnetwork
+        #    version: v1.0.5
           # - project: nomic
           #   version: stakenet
-          - project: omniflixhub
-            version: v0.4.1
-          - project: osmosis
-            version: v10.0.0
-          - project: panacea
-            version: v2.0.2
-          - project: persistence
-            version: v0.1.3
-          - project: regen
-            version: v3.0.0
-          - project: rizon
-            version: v0.2.8
-          - project: sentinel
-            version: v0.8.3
-          - project: shentu
-            version: v2.2.0
-          - project: sifchain
-            version: v0.13.3
-          - project: sommelier
-            version: v3.1.0
-          - project: stargaze
-            version: v1.1.2
-          - project: starname
-            version: v0.10.18
-          # - project: terra
-          #   version: v0.5.18
-          - project: thorchain
-            version: chaosnet-multichain
-          - project: umee
-            version: v1.0.1
-          - project: vidulum
+        #  - project: omniflixhub
+        #    version: v0.4.1
+        #  - project: osmosis
+        #    version: v10.0.0
+        #  - project: panacea
+       #     version: v2.0.2
+        #  - project: persistence
+        #    version: v0.1.3
+       #   - project: regen
+       #     version: v3.0.0
+        #  - project: rizon
+        #    version: v0.2.8
+        #  - project: sentinel
+        #    version: v0.8.3
+        #  - project: shentu
+        #    version: v2.2.0
+        #  - project: sifchain
+        #    version: v0.13.3
+        #  - project: sommelier
+        #    version: v3.1.0
+        #  - project: stargaze
+        #    version: v1.1.2
+        #  - project: starname
+        #  #  version: v0.10.18
+        #  # - project: terra
+       #   #   version: v0.5.18
+        #  - project: thorchain
+        #    version: chaosnet-multichain
+          - project: noria
             version: v1.0.0
+        #  - project: vidulum
+        #    version: v1.0.0
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-buildx-action@v1
