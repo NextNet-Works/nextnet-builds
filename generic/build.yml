@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  node_1:
+    build:
+      context: ../
+      args:
+        GOLANG_VERSION: 1.17-buster
+        BUILD_IMAGE: build_wasmvm
+    ports:
+      - '26656:26656'
+      - '26657:26657'
+      - '1317:1317'
+    environment:
+      - MONIKER=node_1
+      - CHAIN_JSON=https://raw.githubusercontent.com/NextNet-Works/net/master/noria/meta.json
+    # - BINARY_ZIP_PATH=akash_0.15.0-rc14_linux_amd64/akash
+      - BINARY_URL=https://github.com/noria-net/noria/archive/refs/tags/v1.0.0.zip
+      - PROJECT=noria
+      - PROJECT_BIN=noriad
+      - PROJECT_DIR=.$PROJECT_BIN
+    env_file:
+      - ../.env
+    volumes:
+      - ./node-data:/root/.akash

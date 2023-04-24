@@ -1,0 +1,50 @@
+{
+  "chain_name": "noria",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "noria",
+  "chain_id": "oasis-3",
+  "bech32_prefix": "noria",
+  "daemon_name": "noria",
+  "node_home": "$HOME/.noria",
+  "genesis": {
+    "genesis_url": "https://raw.githubusercontent.com/noria-net/noria/main/genesis.json"
+  },
+  "codebase": {
+    "git_repo": "github.com/noria-net/noria",
+    "recommended_version": "v1.0.0",
+    "compatible_versions": [
+      "v1.0.0"
+    ],
+    "binaries": {
+      "linux/amd64": "https://github.com/noria-net/noria/archive/refs/tags/v1.0.0.zip"
+    }
+  },
+  "peers": {
+    "seeds": [
+      {
+        "id": "c166422d24413f0661b006af29f7545890a9a1f0",
+        "address": "54.173.208.94:26656"
+      }
+    ]
+  },
+  "apis": {
+    "rpc": [
+      {
+        "address": "https://archive-rpc.noria.nextnet.zone:443"
+      }
+    ],
+    "rest": [
+      {
+        "address": "https://archive-lcd.noria.nextnet.zone:443",
+        "provider": "NextNet"
+      }
+    ],
+    "grpc": [
+      {
+        "address": "archive-grpc.noria.nextnet.zone:443",
+        "provider": "NextNet"
+      }
+    ]
+  }
+}

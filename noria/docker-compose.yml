@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  node_1:
+    image: ghcr.io/ovrclk/cosmos-omnibus:v0.2.3-kujira-v0.4.0
+    ports:
+      - '26656:26656'
+      - '26657:26657'
+      - '1317:1317'
+    environment:
+      - MONIKER=node_1
+      # - CHAIN_JSON=https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/chain.json
+      - GENESIS_URL=wget https://raw.githubusercontent.com/noria-net/noria/main/genesis.json -O $HOME/.noria/config/genesis.json
+      #- ADDRBOOK_URL=https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/addrbook.json
+      - P2P_PERSISTENT_PEERS=c166422d24413f0661b006af29f7545890a9a1f0@54.173.208.94:26656
+      - MINIMUM_GAS_PRICES=0.00125ucrd
+      - NORIAD_CONSENSUS_TIMEOUT_COMMIT=1500ms
+      - BINARY_HOME="$HOME/.noria"
+      - CONFIG_HOME="$BINARY_HOME/config"
+      - CHAIN_ID="oasis-3"
+      - DENOM="unoria"
+      - GAS_PRICE="0.0025"
+      - GAS_PRICE_DENOM="ucrd"
+    volumes:
+      - ./node-data:/root/.noria
