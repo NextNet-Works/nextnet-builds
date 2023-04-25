@@ -88,7 +88,7 @@ RUN chmod +x /bin/$PROJECT_BIN
 #
 FROM ${BUILD_IMAGE} AS omnibus
 LABEL org.opencontainers.image.source https://github.com/ovrclk/cosmos-omnibus
-LABEL org.opencontainers.image.source https://github.com/nextnet-works/nextnet-builds
+# LABEL org.opencontainers.image.source https://github.com/nextnet-works/nextnet-builds
 
 
 RUN apt-get update && \
