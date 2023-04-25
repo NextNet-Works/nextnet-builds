@@ -5,12 +5,12 @@ services:
     build:
       context: ../
       args:
-        PROJECT: brain
-        PROJECT_BIN: braind
-        PROJECT_DIR: .brain
-        VERSION: v0.1.0
-        REPOSITORY: https://github.com/the-denom/brain
-        NAMESPACE: BRAIND
+        PROJECT: noria
+        PROJECT_BIN: noriad
+        PROJECT_DIR: .noria
+        VERSION: v1.0.0
+        REPOSITORY: https://github.com/noria-net/noria
+        NAMESPACE: NORIAD
         GOLANG_VERSION: 1.18-buster
     ports:
       - '26656:26656'
@@ -19,19 +19,19 @@ services:
     environment:
       - MONIKER=node_1
       # - CHAIN_JSON=https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/chain.json
-      - GENESIS_URL=https://raw.githubusercontent.com/cdbo/brain/master/genesis.json
+      - GENESIS_URL=wget https://raw.githubusercontent.com/noria-net/noria/main/genesis.json
       #- ADDRBOOK_URL=https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/addrbook.json
       - P2P_PERSISTENT_PEERS=c166422d24413f0661b006af29f7545890a9a1f0@54.173.208.94:26656
-      - MINIMUM_GAS_PRICES=0.00125ubrain
-      - BRAIND_CONSENSUS_TIMEOUT_COMMIT=1500ms
-      - HOME=/root
-      - BINARY_HOME="$HOME/.brain"
-      - CONFIG_HOME="$BINARY_HOME/config"
-      - CHAIN_ID="brain-t1"
-      - DENOM="ubrain"
+      - MINIMUM_GAS_PRICES=0.00125ucrd
+      - NORIAD_CONSENSUS_TIMEOUT_COMMIT=1500ms
+      - #HOME="/root"
+      - #BINARY_HOME="/root/.noria"
+      - #CONFIG_HOME="$BINARY_HOME/config"
+      - CHAIN_ID="oasis-3"
+      - DENOM="unoria"
       - GAS_PRICE="0.0025"
-      - GAS_PRICE_DENOM="ubrain"
+      - GAS_PRICE_DENOM="ucrd"
     env_file:
       - ../.env
     volumes:
-      - ./node-data:/root/.brain
+      - ./node-data:/root/.noria

@@ -15,9 +15,9 @@ services:
       - P2P_PERSISTENT_PEERS=fd77311164a71427306a8190e981ee8bb901cfb3@68.183.197.66:26656
       - MINIMUM_GAS_PRICES=0.0025ubrain
       - NORIAD_CONSENSUS_TIMEOUT_COMMIT=1500ms
-      - HOME=/root
-      - BINARY_HOME="$HOME/.brain"
-      - CONFIG_HOME="$BINARY_HOME/config"
+      #- HOME=/root
+      #- BINARY_HOME="$HOME/.brain"
+      #- CONFIG_HOME="$BINARY_HOME/config"
       - CHAIN_ID="brain-t1"
       - DENOM="ubrain"
       - GAS_PRICE="0.0025"
