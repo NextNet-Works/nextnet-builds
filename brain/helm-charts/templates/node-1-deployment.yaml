@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml -c
+    kompose.version: 1.28.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: node-1
+  name: node-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: node-1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml -c
+        kompose.version: 1.28.0 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/brain-default: "true"
+        io.kompose.service: node-1
+    spec:
+      containers:
+        - env:
+            - name: CHAIN_ID
+              value: '"brain-t1"'
+            - name: DENOM
+              value: '"ubrain"'
+            - name: GAS_PRICE
+              value: '"0.0025"'
+            - name: GAS_PRICE_DENOM
+              value: '"ubrain"'
+            - name: GENESIS_URL
+              value: https://raw.githubusercontent.com/cdbo/brain/master/genesis.json
+            - name: MINIMUM_GAS_PRICES
+              value: 0.0025ubrain
+            - name: MONIKER
+              value: node_1
+            - name: NORIAD_CONSENSUS_TIMEOUT_COMMIT
+              value: 1500ms
+            - name: P2P_PERSISTENT_PEERS
+              value: fd77311164a71427306a8190e981ee8bb901cfb3@68.183.197.66:26656
+          image: docker pull ghcr.io/nextnet-works/brain:v0.1.0
+          name: node-1
+          ports:
+            - containerPort: 26656
+            - containerPort: 26657
+            - containerPort: 1317
+          resources: {}
+          volumeMounts:
+            - mountPath: /root/.brain
+              name: node-1-claim0
+      restartPolicy: Always
+      volumes:
+        - name: node-1-claim0
+          persistentVolumeClaim:
+            claimName: node-1-claim0
+status: {}
