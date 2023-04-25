@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   node_1:
-    image: ghcr.io/nextnet-works/cosmos-omnibus:v0.2.3-noria-v0.1.0
+    image: docker pull ghcr.io/nextnet-works/brain:v0.1.0
     ports:
       - '26656:26656'
       - '26657:26657'
