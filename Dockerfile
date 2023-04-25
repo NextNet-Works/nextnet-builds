@@ -1,6 +1,6 @@
 ARG BUILD_IMAGE=default
 ARG BUILD_METHOD=source
-ARG GOLANG_VERSION=1.17-buster
+ARG GOLANG_VERSION=1.18-buster
 ARG BASE_IMAGE=golang:${GOLANG_VERSION}
 
 # f
@@ -21,7 +21,7 @@ RUN apt-get update && \
 #
 FROM build_base AS build_wasmvm
 
-ARG WASMVM_VERSION=v0.16.7
+ARG WASMVM_VERSION=v0.29.2
 ARG WASMVM_URL=https://raw.githubusercontent.com/CosmWasm/wasmvm/${WASMVM_VERSION}/api/libwasmvm.so
 ADD ${WASMVM_URL} /lib/libwasmvm.so
 

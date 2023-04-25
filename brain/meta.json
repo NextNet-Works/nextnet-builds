@@ -1,0 +1,50 @@
+{
+  "chain_name": "brain",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "brain",
+  "chain_id": "brain-t1",
+  "bech32_prefix": "brain",
+  "daemon_name": "brain",
+  "node_home": "$HOME/.brain",
+  "genesis": {
+    "genesis_url": "https://raw.githubusercontent.com/cdbo/brain/master/genesis.json"
+  },
+  "codebase": {
+    "git_repo": "github.com/the-denom/brain",
+    "recommended_version": "v0.1.0",
+    "compatible_versions": [
+      "v0.1.0"
+    ],
+    "binaries": {
+      "linux/amd64": "https://github.com/the-denom/brain/blob/v0.1.0/release/brain_linux_amd64.tar.gz"
+    }
+  },
+  "peers": {
+    "seeds": [
+      {
+        "id": "fd77311164a71427306a8190e981ee8bb901cfb3",
+        "address": "68.183.197.66:26656"
+      }
+    ]
+  },
+  "apis": {
+    "rpc": [
+      {
+        "address": "https://archive-rpc.brain.nextnet.zone"
+      }
+    ],
+    "rest": [
+      {
+        "address": "https://archive-lcd.brain.nextnet.zone",
+        "provider": "NextNet"
+      }
+    ],
+    "grpc": [
+      {
+        "address": "archive-grpc.brain.nextnet.zone",
+        "provider": "NextNet"
+      }
+    ]
+  }
+}

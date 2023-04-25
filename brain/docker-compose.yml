@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   node_1:
-    image: docker pull ghcr.io/nextnet-works/cosmos-omnibus:v0.2.3-noria-v1.0.0
+    image: ghcr.io/nextnet-works/cosmos-omnibus:v0.2.3-noria-v0.1.0
     ports:
       - '26656:26656'
       - '26657:26657'
@@ -10,17 +10,17 @@ services:
     environment:
       - MONIKER=node_1
       # - CHAIN_JSON=https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/chain.json
-      - GENESIS_URL=https://raw.githubusercontent.com/noria-net/noria/main/genesis.json
+      - GENESIS_URL=https://raw.githubusercontent.com/cdbo/brain/master/genesis.json
       #- ADDRBOOK_URL=https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/addrbook.json
-      - P2P_PERSISTENT_PEERS=c166422d24413f0661b006af29f7545890a9a1f0@54.173.208.94:26656
-      - MINIMUM_GAS_PRICES=0.00125ucrd
+      - P2P_PERSISTENT_PEERS=fd77311164a71427306a8190e981ee8bb901cfb3@68.183.197.66:26656
+      - MINIMUM_GAS_PRICES=0.0025ubrain
       - NORIAD_CONSENSUS_TIMEOUT_COMMIT=1500ms
       - HOME=/root
-      - BINARY_HOME="$HOME/.noria"
+      - BINARY_HOME="$HOME/.brain"
       - CONFIG_HOME="$BINARY_HOME/config"
-      - CHAIN_ID="oasis-3"
-      - DENOM="unoria"
+      - CHAIN_ID="brain-t1"
+      - DENOM="ubrain"
       - GAS_PRICE="0.0025"
-      - GAS_PRICE_DENOM="ucrd"
+      - GAS_PRICE_DENOM="ubrain"
     volumes:
-      - ./node-data:/root/.noria
+      - ./node-data:/root/.brain

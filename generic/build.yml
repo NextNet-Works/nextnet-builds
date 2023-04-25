@@ -5,7 +5,7 @@ services:
     build:
       context: ../
       args:
-        GOLANG_VERSION: 1.17-buster
+        GOLANG_VERSION: 1.18-buster
         BUILD_IMAGE: build_wasmvm
     ports:
       - '26656:26656'
