@@ -1,5 +1,5 @@
 name: publish
-on: # [push, pull_request]
+on: ## [push, pull_request]
   push:
     tags:
       - v*
