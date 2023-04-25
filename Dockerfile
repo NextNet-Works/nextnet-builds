@@ -88,6 +88,8 @@ RUN chmod +x /bin/$PROJECT_BIN
 #
 FROM ${BUILD_IMAGE} AS omnibus
 LABEL org.opencontainers.image.source https://github.com/ovrclk/cosmos-omnibus
+LABEL org.opencontainers.image.source https://github.com/nextnet-works/nextnet-builds
+
 
 RUN apt-get update && \
   apt-get install --no-install-recommends --assume-yes ca-certificates curl wget file unzip liblz4-tool gnupg2 jq && \
